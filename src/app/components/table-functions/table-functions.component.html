@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th appSortColumn [sortColumn]="sortColumn" [colName]="'name'" [sortOrder]="sortAscending" (click)="sort('name')">Name
+                <i class="fa fa-chevron-down" ></i>
+            </th>
+            <th appSortColumn [sortColumn]="sortColumn" [colName]="'price'" [sortOrder]="sortAscending" (click)="sort('price')">Price
+                <i class="fa fa-chevron-down" ></i>
+            </th>
+            <th   appSortColumn [sortColumn]="sortColumn" [colName]="'category'" [sortOrder]="sortAscending"(click)="sort('category')">Category
+                <i class="fa fa-chevron-down"></i>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of tableData">
+          <td>{{c.name}}</td>
+          <td>{{c.price}}</td>
+          <td>{{c.category}}</td>
+        </tr>
+      </tbody>
+</table>

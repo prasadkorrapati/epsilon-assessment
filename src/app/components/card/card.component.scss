@@ -1,0 +1,58 @@
+@import './../../../app/scss/_fonts.scss';
+$image-width: 290px;
+$image-height: 200px;
+
+$card-padding-left : 16px;
+$card-padding-top : 20px;
+$card-padding-bottom : 14px;
+
+$box-shadow-color: #000000;
+// $box-shadow-offset-x: 0px;
+// $box-shadow-offset-y: 2px;
+// $box-shadow-blur-radius: 6px;
+
+// $box-shadow-hover-offset-x: 0px;
+// $box-shadow-hover-offset-y: 3px;
+// $box-shadow-hover-blur-radius: 3px;
+
+:host {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: inline-block;
+    border-radius: 1px;
+    box-shadow: 0px 2px 6px $box-shadow-color;
+
+    &:hover {
+        box-shadow: 0px 3px 18px  $box-shadow-color;
+    }
+
+    img {
+        width: $image-width;
+        height: $image-height;
+    }
+
+    .card-desc {
+        padding: $card-padding-top 0 $card-padding-bottom $card-padding-left;
+
+        h5 {
+            @extend .font-semibold ;
+            font-size: 16px;
+            color: #0F5EF0;
+            margin: 0 0 18px 0;
+        }
+        h6 {
+            @extend .font-semibold ;
+            font-size: 12px;
+            color: #7a8594;
+            margin: 0 0 20px 0;
+        }
+        p {
+            @extend .font-regular;
+            font-size: 12px;
+            color: #7a8594;
+        }
+    }
+}
