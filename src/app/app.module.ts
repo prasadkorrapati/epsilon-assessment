@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormElementsComponent } from './components/form-elements/form-elements.component';
 import { TableFunctionsComponent } from './components/table-functions/table-functions.component';
-import { SortableColumnComponent } from './components/sortable-column/sortable-column.component';
+// import { SortableColumnComponent } from './components/sortable-column/sortable-column.component';
 import { SortColumnDirective } from './components/sort-column.directive';
 
 @NgModule({
@@ -14,7 +14,6 @@ import { SortColumnDirective } from './components/sort-column.directive';
     AppComponent,
     FormElementsComponent,
     TableFunctionsComponent,
-    SortableColumnComponent,
     SortColumnDirective
   ],
   imports: [

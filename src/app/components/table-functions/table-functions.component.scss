@@ -43,6 +43,6 @@ table {
 .fa {
     float: right;
     &.disabled {
-        opacity: 20% !important;
+        opacity: .1 !important;
     }
 }

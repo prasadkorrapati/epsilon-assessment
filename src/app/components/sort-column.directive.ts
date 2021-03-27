@@ -23,11 +23,11 @@ export class SortColumnDirective implements OnChanges, OnInit {
           if(this.sortColumn === this.colName) {
             sortElement.classList.remove('disabled');
               if(this.sortOrder ) {
-                sortElement.classList.remove('fa-chevron-up');
-                sortElement.classList.add('fa-chevron-down');
+                sortElement.classList.remove('fa-caret-up');
+                sortElement.classList.add('fa-caret-down');
               } else {
-                sortElement.classList.remove('fa-chevron-down');
-                sortElement.classList.add('fa-chevron-up');
+                sortElement.classList.remove('fa-caret-down');
+                sortElement.classList.add('fa-caret-up');
               }
           } else {
             sortElement.classList.add('disabled')

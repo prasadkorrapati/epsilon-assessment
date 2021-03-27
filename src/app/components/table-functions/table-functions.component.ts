@@ -14,7 +14,7 @@ export class TableFunctionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.tableData = cookies.default;
-    this.sort('name'); // By default sort on name column
+    this.sort(this.sortColumn); // By default sort on name column
   }
 
   sort(colName) {
