@@ -1,13 +1,13 @@
-@import './../../../../app/scss/_fonts.scss';
 .navbar ul {
     li {
         list-style: none;
         display: inline-block;
         a {
-            @extend .font-semibold ;
-            padding: 20px;
             text-decoration: none;
-            color: #0f5ef0;
+            padding: 20px;
+            font-family: 'OpenSans-semibold';
+            font-size: 15px;
+            color: #221F4D;
         }
     }
 }

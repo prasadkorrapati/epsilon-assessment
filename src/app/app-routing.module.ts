@@ -22,14 +22,15 @@ const routes: Routes = [
       {
         path: 'tableFunctions',
         component: TableFunctionsComponent
-      }
+      },
+      { path: '**', redirectTo: '/cardComponent', pathMatch: 'full' }
     ]
-  }
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {useHash: true}),
     CoreModule
   ],
   exports: [RouterModule]

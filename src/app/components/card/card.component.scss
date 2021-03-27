@@ -1,4 +1,4 @@
-@import './../../../app/scss/_fonts.scss';
+
 $image-width: 290px;
 $image-height: 200px;
 
@@ -7,13 +7,11 @@ $card-padding-top : 20px;
 $card-padding-bottom : 14px;
 
 $box-shadow-color: #000000;
-// $box-shadow-offset-x: 0px;
-// $box-shadow-offset-y: 2px;
-// $box-shadow-blur-radius: 6px;
+$text-color-dark: #7a8594;
+$text-color-blue: #0F5EF0;
 
-// $box-shadow-hover-offset-x: 0px;
-// $box-shadow-hover-offset-y: 3px;
-// $box-shadow-hover-blur-radius: 3px;
+$card-default-font-size: 12px;
+$card-title-font-size: 15px;
 
 :host {
     display: flex;
@@ -38,21 +36,22 @@ $box-shadow-color: #000000;
         padding: $card-padding-top 0 $card-padding-bottom $card-padding-left;
 
         h5 {
-            @extend .font-semibold ;
-            font-size: 16px;
-            color: #0F5EF0;
+            font-family: 'OpenSans-semibold';
+            font-size: $card-title-font-size;
+            color: $text-color-blue;
             margin: 0 0 18px 0;
         }
         h6 {
-            @extend .font-semibold ;
-            font-size: 12px;
-            color: #7a8594;
+            font-family: 'OpenSans-semibold';
+            font-size: $card-default-font-size;
+            color: $text-color-dark;
             margin: 0 0 20px 0;
         }
         p {
-            @extend .font-regular;
-            font-size: 12px;
-            color: #7a8594;
+            font-family: 'OpenSans-regular';
+            font-size: $card-default-font-size;
+            color: $text-color-dark;
+            margin: 0;
         }
     }
 }

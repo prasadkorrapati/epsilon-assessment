@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TableServiceService } from '../table-service.service';
 import * as cookies from './../../../assets/json/cookies.json';
 @Component({
   selector: 'app-table-functions',
@@ -10,7 +11,8 @@ export class TableFunctionsComponent implements OnInit {
   tableData: any;
   sortColumn = 'name';
   sortAscending = true;
-  constructor() { }
+
+  constructor(private tableServiceService: TableServiceService) { }
 
   ngOnInit(): void {
     this.tableData = cookies.default;
@@ -24,10 +26,6 @@ export class TableFunctionsComponent implements OnInit {
     } else {
       this.sortAscending = !this.sortAscending;
     }
-    if(this.sortAscending) {
-      this.tableData.sort((a, b) => a[colName] < b[colName] ? 1 : a[colName] > b[colName] ? -1 : 0)
-    } else {
-      this.tableData.sort((a, b) => a[colName] > b[colName] ? 1 : a[colName] < b[colName] ? -1 : 0)
-    }
+    this.tableServiceService.sort(this.tableData, this.sortAscending, this.sortColumn);
   }
 }

@@ -1,3 +1,13 @@
+$table-font-size: 12px;
+$table-border-color: #ced8e4;
+$table-header-color: #221F4D;
+$table-cell-padding: 10px 10px 10px 15px;
+
+$table-even-row-background-color: #F5F8FA;
+
+$table-row-hover-background-color: #E7EFFD;
+$table-row-hover-border-color: #0F5EF0;
+
 :host {
     display: flex;
     justify-content: center;
@@ -5,39 +15,38 @@
 
 table {
     width: 800px;
-    font-size: 12px;
+    font-size: $table-font-size;
     border-collapse: collapse;
-    border: 1px solid #ced8e4;
+    border: 1px solid $table-border-color;
 
     th {
+        cursor: pointer;
         text-align: left;
         font-family: 'OpenSans-semibold';
-        color: #221F4D;
-        background-color: #ced8e4;
-        padding: 10px 0 10px 15px;
-        cursor: pointer;
-        padding-right: 10px;
+        color: $table-header-color;
+        background-color: $table-border-color;
+        padding: $table-cell-padding;
+
         &:not(:last-child) {
-            border-right: 1px solid #221F4D;
+            border-right: 1px solid $table-header-color;
         }
     }
     td {
-        padding: 10px 0 10px 15px;
-        color: #221F4D;
+        padding: $table-cell-padding;
+        color: $table-header-color;
         border: 0px;
     }
 
     tbody tr {
         &:hover {
-            background-color: #E7EFFD;
-            outline: 1px solid #0F5EF0 !important;
+            background-color: $table-row-hover-background-color;
+            outline: 1px solid $table-row-hover-border-color ;
         }
 
         &:nth-child(even) {
-            background-color: #F5F8FA;
+            background-color: $table-even-row-background-color;
         }
     }
-
 }
 
 .fa {
