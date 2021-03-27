@@ -36,8 +36,16 @@ form {
             color: $form-label-color;
             border: 1px solid $form-label-color;
 
-            &::placeholder {
+            &::-webkit-input-placeholder {
                 opacity: 50%;
+            }
+
+            &::-ms-input-placeholder {
+                opacity: 50%;
+            }
+
+            &::placeholder {
+                opacity: 50%;;
             }
         }        
     }
