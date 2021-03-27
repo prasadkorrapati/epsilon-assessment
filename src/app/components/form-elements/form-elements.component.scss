@@ -37,15 +37,15 @@ form {
             border: 1px solid $form-label-color;
 
             &::-webkit-input-placeholder {
-                opacity: 50%;
+                opacity: 0.5;
             }
 
             &:-ms-input-placeholder {
-                opacity: 50%;
+                opacity: 0.5;
             }
 
             &::placeholder {
-                opacity: 50%;;
+                opacity: 0.5;
             }
         }        
     }
