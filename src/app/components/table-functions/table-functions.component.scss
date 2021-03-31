@@ -17,34 +17,67 @@ table {
     width: 800px;
     font-size: $table-font-size;
     border-collapse: collapse;
-    border: 1px solid $table-border-color;
 
-    th {
-        cursor: pointer;
-        text-align: left;
-        font-family: 'OpenSans-semibold';
-        color: $table-header-color;
-        background-color: $table-border-color;
-        padding: $table-cell-padding;
-
-        &:not(:last-child) {
-            border-right: 1px solid $table-header-color;
+    thead {
+        border-width: 1px 1px 0 1px;
+        border-color: $table-border-color;
+        border-style: solid;
+        
+        th {
+            cursor: pointer;
+            text-align: left;
+            font-family: 'OpenSans-semibold';
+            color: $table-header-color;
+            background-color: $table-border-color;
+            padding: $table-cell-padding;
+            &:not(:last-child) {
+                border-right: 1px solid $table-header-color;
+            }
         }
     }
-    td {
-        padding: $table-cell-padding;
-        color: $table-header-color;
-        border: 0px;
-    }
+    
 
     tbody tr {
+
         &:hover {
             background-color: $table-row-hover-background-color;
-            outline: 1px solid $table-row-hover-border-color ;
+            border: 1px solid $table-row-hover-border-color !important;
+
+            td {
+                border-top: 1px solid $table-row-hover-border-color !important;
+                border-bottom: 1px solid $table-row-hover-border-color ;
+                :first-child {
+                    border-left: 1px solid $table-row-hover-border-color ;
+                }
+
+                :last-child {
+                    border-right: 1px solid $table-row-hover-border-color ;
+                }
+            }
         }
 
         &:nth-child(even) {
             background-color: $table-even-row-background-color;
+            border: 1px solid $table-even-row-background-color;
+            border-right: 1px solid $table-border-color;
+            border-left: 1px solid $table-border-color;
+        }
+
+        &:nth-child(odd) {
+            background-color: white;
+            border: 1px solid white;
+            border-right: 1px solid $table-border-color;
+            border-left: 1px solid $table-border-color;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $table-border-color;
+        }
+
+        td {
+            padding: $table-cell-padding;
+            color: $table-header-color;
+            border: 0px;
         }
     }
 }

@@ -2,4 +2,7 @@
 
 * {
     @extend .font-regular ;
+    box-sizing: border-box;
+    position: relative;
+    font-weight: normal;
 }
